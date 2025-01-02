@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "nonebot-plugin-morning-continue"
+version = "0.0.1"
+description = ""
+authors = ["gongfuture <gongfuture@outlook.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+nonebot2 = "^2.4.1"
+nonebot-plugin-send-anything-anywhere = "^0.7.1"
+nonebot-plugin-userinfo = "^0.2.6"
+nonebot-plugin-localstore = "^0.7.3"
+
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
+
+
+[tool.poetry.group.dev.dependencies]
+nonebot2 = {extras = [
+    "fastapi",
+    "httpx",
+    "websockets"], version = "^2.4.1"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
